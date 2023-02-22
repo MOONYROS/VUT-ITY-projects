@@ -1,24 +1,26 @@
-PROJ=proj1
+ITY_PROJEKT=proj1
 PACK=xlukas15-fit
 
 .PHONY: clean pack pdflatex
 
-$(PROJ).pdf: $(PROJ).ps
-	ps2pdf $(PROJ).ps
+$(ITY_PROJEKT).pdf: $(ITY_PROJEKT).ps
+	ps2pdf $(ITY_PROJEKT).ps
 
-$(PROJ).ps: $(PROJ).dvi
-	dvips -t a4 $(PROJ).dvi
+$(ITY_PROJEKT).ps: $(ITY_PROJEKT).dvi
+	dvips -t a4 $(ITY_PROJEKT).dvi
 
-$(PROJ).dvi: $(PROJ).tex
-	latex $(PROJ).tex
-
-$(PACK).tar.gz: $(PROJ).tex
-	tar -czf $(PACK).tar.gz Makefile $(PROJ).tex
-
-pdflatex: $(PROJ).tex
-	pdflatex $(PROJ).tex
-
-pack: $(PACK).tar.gz
-
+$(ITY_PROJEKT).dvi: $(ITY_PROJEKT).tex
+	latex $(ITY_PROJEKT).tex
+	latex $(ITY_PROJEKT).tex
+pdflatex: $(ITY_PROJEKT).tex
+	pdflatex $(ITY_PROJEKT).tex
+	
 clean:
-	rm -f $(PROJ).aux $(PROJ).dvi $(PROJ).log $(PROJ).ps $(PROJ).synctex.gz $(PROJ).fls $(PROJ).fdb_latexmk
+	rm -f $(ITY_PROJEKT).aux
+	rm -f $(ITY_PROJEKT).out
+	rm -f $(ITY_PROJEKT).dvi
+	rm -f $(ITY_PROJEKT).log
+	rm -f $(ITY_PROJEKT).ps
+	rm -f $(ITY_PROJEKT).synctex.gz
+	rm -f $(ITY_PROJEKT).fls
+	rm -f $(ITY_PROJEKT).fdb_latexmk
