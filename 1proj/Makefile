@@ -1,7 +1,4 @@
 ITY_PROJEKT=proj1
-PACK=xlukas15-fit
-
-.PHONY: clean pack pdflatex
 
 $(ITY_PROJEKT).pdf: $(ITY_PROJEKT).ps
 	ps2pdf $(ITY_PROJEKT).ps
