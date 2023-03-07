@@ -1,0 +1,138 @@
+\documentclass[11pt, a4paper, twocolumn]{article}
+\usepackage[left=1.4cm,text={18.2cm, 25.2cm},top=2.3cm]{geometry}
+\usepackage[IL2]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage[czech]{babel}
+\usepackage{parskip}
+\usepackage{amsthm, amssymb, amsmath}
+\usepackage{times}
+\usepackage{hyperref}
+\usepackage{siunitx}
+\usepackage{dsfont}
+
+\newtheorem{theorem}{Theorem}
+
+\hypersetup{hidelinks}
+\setlength{\parindent}{\baselineskip}
+\setlength{\parskip}{0em}
+\theoremstyle{definition}
+\newtheorem{definice}{Definice}
+\newtheorem{veta}{Věta}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\Huge \textsc{Vysoké učení technické v~Brně}
+
+\huge \textsc{Fakulta informačních technologií}\\
+\vspace{\stretch{0.382}}
+{\LARGE Typografie a~publikování -- 2. projekt\\
+Sazba dokumentů a~matematických výrazů\\}
+\vspace{\stretch{0.618}}
+\end{center}
+{\Large 2023 \hfill Ondřej Lukášek (xlukas15)}
+\end{titlepage}
+
+\section*{Úvod}
+
+V této úloze si vyzkoušíme sazbu titulní strany, ma\-te\-ma\-tic\-kých vzorců, prostředí a dalších textových struktur obvyklých pro technicky zaměřené texty\,--\,například De\-fi\-ni\-ce~\ref{definice1} nebo rovnice~\eqref{rovnice3} na straně~\pageref{rovnice3}. Pro vytvoření těchto odkazů používáme kombinace příkazů \texttt{\textbackslash label}, \texttt{\textbackslash ref}, \texttt{\textbackslash eqref}~a~\texttt{\textbackslash pageref}. Před odkazy patří nezlomitelná mezera. Pro zvýrazňování textu jsou zde několikrát po\-u\-ži\-ty příkazy \texttt{\textbackslash verb} a \texttt{\textbackslash emph}.\par
+Na titulní straně je použito prostředí \texttt{titlepage} a sá\-ze\-ní nadpisu podle optického středu s využitím \emph{přesného} zlatého řezu. Tento postup byl probírán na přednášce. Dále jsou na titulní straně použity čtyři různé velikosti písma a mezi dvojicemi řádků textu je použito odřádkování se zadanou relativní velikostí 0,5\,em a 0,4\,em\footnote{Nezapomeňte použít správný typ mezery mezi číslem a jednotkou.}.
+
+\section{Matematický text}
+
+% mezera u ${}$ mezi zavorkami
+V této sekci se podíváme na sázení matematických sym\-bo\-lů a výrazů v plynulém textu pomocí prostředí \texttt{math}. Definice a věty sázíme pomocí příkazu \texttt{\textbackslash newtheorem} s~využitím balíku \texttt{amsthm}. Někdy je vhodné použít kon\-struk\-ci \texttt{\$\{\,\}\$} nebo \texttt{\textbackslash mbox\{\,\}}, která říká, že (matematický) text nemá být zalomen.
+
+\medskip
+
+\begin{definice} \label{definice1}
+Zásobníkový automat \emph{(ZA) je definován jako sedmice tvaru $A = (Q, \Sigma, \Gamma, \delta, q_0, Z_0, F)$, kde:} 
+
+\medskip
+
+\begin{itemize} \setlength \itemsep{1em} % s timhle si pohrat
+    \item \emph{$Q$ je konečná množina} vnitřních (řídicích) stavů,
+    \item \emph{$\Sigma$ je konečná} vstupní abeceda,
+    \item \emph{$\Gamma$ je konečná} zásobníková abeceda,
+    \item \emph{$\delta$ je} přechodová funkce $Q \times (\Sigma\cup\{\epsilon\}) \times \Gamma \rightarrow 2^{Q \times \Gamma^*}$,
+    \item \emph{$q_0 \in Q$ je} počáteční stav, \emph{$Z_0 \in \Gamma$ je} startovací symbol zásobníku \emph{a $F \subseteq Q$ je množina} koncových stavů.
+\end{itemize}
+
+\medskip
+
+Nechť $P = (Q, \Sigma, \Gamma, \delta, q_0, Z_0, F)$ je ZA. \emph{Konfigurací} nazveme trojici $(q, \omega, \alpha) \in Q \times \Sigma^* \times \Gamma^*$, kde $q$ je aktuální stav vnitřního řízení, $\omega$ je dosud nezpracovaná část vstup\-ní\-ho řetězce a $\alpha = Z_{i_1} Z_{i_2} \dots Z_{i_k}$ je obsah zásobníku.
+\end{definice}
+
+\subsection{Podsekce obsahující definici a větu}
+
+\begin{definice}
+    Řetězec $\omega$ nad abecedou $\Sigma$ je přijat ZA \emph{$A$ jest\-li\-že $(q_0, \omega, Z_0) \overset{\ast}{\underset{A}{\vdash}} (q_F, \epsilon, \gamma)$ pro nějaké $\gamma \in \Gamma^*$ a $q_F \in F$. Množina $L(A) = \{\omega \mid \omega$ je přijat ZA $A\} \subseteq \Sigma^*$ je} jazyk přijímaný ZA $A$.
+\end{definice}
+
+\medskip
+
+\begin{veta}
+    \emph{Třída jazyků, které jsou přijímány ZA, odpovídá} bezkontextovým jazykům.
+\end{veta}
+
+\section{Rovnice}
+Složitější matematické formulace sázíme mimo plynulý text pomocí prostředí \texttt{displaymath}. Lze umístit i ně\-ko\-lik výrazů na jeden řádek, ale pak je třeba tyto vhodně oddělit, například příkazem \texttt{\textbackslash quad}.
+
+\begin{displaymath}
+    1^{2^3} \neq \Delta^1_{\Delta^2_{\Delta^3}} \quad y^{11}_{22} - \sqrt[9]{x + \sqrt[7]{y}} \quad x > y_1 \leq y^2
+\end{displaymath}
+
+\noindent V rovnici~\eqref{rovnice2} jsou využity tři typy závorek s různou \emph{ex\-pli\-cit\-ně} definovanou velikostí. Také nepřehlédněte, že nasledující tři rovnice mají zarovnaná rovnítka, a použijte k~tomuto~účelu vhodné prostředí.
+
+% MOC VELKA MEZERA
+
+\begin{eqnarray}
+    -\cos^2{\beta} & = & \frac{\frac{\frac{1}{x} + \frac{1}{3}} + {1000}}{\overset{8}{\underset{j = 2}{\prod}}q_j} \\
+    \label{rovnice2}
+    \bigg(\Big\{b \star [3 \div 4] \circ a\Big\}^{\frac{2}{3}}\bigg) & = & \log_{10}x \\
+    \label{rovnice3}
+    \int^b_a f(x)dx & = & \int^d_c f(y)dy
+\end{eqnarray}
+
+\noindent V této větě vidíme, jak vypadá implicitní vysázení limity $\lim_{n \to \infty} f(m)$ v normálním odstavci textu. Podobně je to~i~s~dalšími symboly jako $\bigcup_{N \in \mathcal{M}}N$ či $\sum_{i=1}^m x_i^2$. S vy\-nu\-ce\-ním méně úsporné sazby příkazem \texttt{\textbackslash limits} budou vzorce vysázeny v podobě $\lim\limits_{m \to \infty}f(m)$ a $\sum\limits^m_{i=1}x^4_i$.
+
+\section{Matice}
+Pro sázení matic se velmi často používá prostředí \texttt{array} a závorky (\texttt{\textbackslash left}, \texttt{\textbackslash right}).
+
+% MOC VELKA MEZERA
+
+$$ \text{\textbf{B}} = \left|
+\begin{array}{cccc}
+b_{11} & b_{12} & \ldots & b_{1n} \\
+b_{21} & b_{22} & \ldots & b_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+b_{m1} & b_{m2} & \ldots & b_{mn}
+\end{array} \right|
+= \left|
+\begin{array}{cc}
+t & u\\
+v & w
+\end{array}\right|
+= tw - uv$$
+
+$$ \mathbb{X} = \textbf{Y} \iff \bigg[
+\begin{array}{ccc}
+     & \Omega + \Delta & \hat{\psi} \\
+    \vec{\pi} & \omega & 
+\end{array}
+\bigg] \neq 42
+$$
+
+Prostředí \texttt{array} lze úspěšně využít i jinde, například~na pravé straně následující rovnice. Kombinační číslo na levé straně vysázejte pomocí příkazu \texttt{\textbackslash binom}.
+
+$$
+\binom{n}{k} = \left\{
+\begin{array}{c l}
+     0 & \text{pro } k<0 \\
+     \frac{n!}{k!(n-k)!} & \text{pro } 0 \leq k \leq n \\
+     0 & \text{pro } k>0
+\end{array} \right. $$
+
+\end{document}
