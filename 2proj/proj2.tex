@@ -37,13 +37,13 @@ Sazba dokumentů a~matematických výrazů\\}
 
 \section*{Úvod}
 
-V této úloze si vyzkoušíme sazbu titulní strany, ma\-te\-ma\-tic\-kých vzorců, prostředí a dalších textových struktur obvyklých pro technicky zaměřené texty\,--\,například De\-fi\-ni\-ce~\ref{definice1} nebo rovnice~\eqref{rovnice3} na straně~\pageref{rovnice3}. Pro vytvoření těchto odkazů používáme kombinace příkazů \texttt{\textbackslash label}, \texttt{\textbackslash ref}, \texttt{\textbackslash eqref}~a~\texttt{\textbackslash pageref}. Před odkazy patří nezlomitelná mezera. Pro zvýrazňování textu jsou zde několikrát po\-u\-ži\-ty příkazy \texttt{\textbackslash verb} a \texttt{\textbackslash emph}.\par
-Na titulní straně je použito prostředí \texttt{titlepage} a sá\-ze\-ní nadpisu podle optického středu s využitím \emph{přesného} zlatého řezu. Tento postup byl probírán na přednášce. Dále jsou na titulní straně použity čtyři různé velikosti písma a mezi dvojicemi řádků textu je použito odřádkování se zadanou relativní velikostí 0,5\,em a 0,4\,em\footnote{Nezapomeňte použít správný typ mezery mezi číslem a jednotkou.}.
+V této úloze si vyzkoušíme sazbu titulní strany, ma\-te\-ma\-tic\-kých vzorců, prostředí a dalších textových struktur obvyklých pro technicky zaměřené texty\,--\,například De\-fi\-ni\-ce~\ref{definice1} nebo rovnice~\eqref{rovnice3} na straně~\pageref{rovnice3}. Pro vytvoření těchto odkazů používáme kombinace příkazů \verb|\label|, \verb|\ref|, \verb|\eqref|~a~\verb|\pageref|. Před odkazy patří nezlomitelná mezera. Pro zvýrazňování textu jsou zde několikrát po\-u\-ži\-ty příkazy \verb|\verb| a \verb|\emph|.\par
+Na titulní straně je použito prostředí \verb|titlepage| a sá\-ze\-ní nadpisu podle optického středu s využitím \emph{přesného} zlatého řezu. Tento postup byl probírán na přednášce. Dále jsou na titulní straně použity čtyři různé velikosti písma a mezi dvojicemi řádků textu je použito odřádkování se zadanou relativní velikostí 0,5\,em a 0,4\,em\footnote{Nezapomeňte použít správný typ mezery mezi číslem a jednotkou.}.
 
 \section{Matematický text}
 
 % mezera u ${}$ mezi zavorkami
-V této sekci se podíváme na sázení matematických sym\-bo\-lů a výrazů v plynulém textu pomocí prostředí \texttt{math}. Definice a věty sázíme pomocí příkazu \texttt{\textbackslash newtheorem} s~využitím balíku \texttt{amsthm}. Někdy je vhodné použít kon\-struk\-ci \texttt{\$\{\,\}\$} nebo \texttt{\textbackslash mbox\{\,\}}, která říká, že (matematický) text nemá být zalomen.
+V této sekci se podíváme na sázení matematických sym\-bo\-lů a výrazů v plynulém textu pomocí prostředí \verb|math|. Definice a věty sázíme pomocí příkazu \verb|\newtheorem| s~využitím balíku \verb|amsthm|. Někdy je vhodné použít kon\-struk\-ci \verb|${}$| nebo \verb|\mbox{}|, která říká, že (matematický) text nemá být zalomen.
 
 \medskip
 
@@ -62,13 +62,13 @@ Zásobníkový automat \emph{(ZA) je definován jako sedmice tvaru $A = (Q, \Sig
 
 \medskip
 
-Nechť $P = (Q, \Sigma, \Gamma, \delta, q_0, Z_0, F)$ je ZA. \emph{Konfigurací} nazveme trojici $(q, \omega, \alpha) \in Q \times \Sigma^* \times \Gamma^*$, kde $q$ je aktuální stav vnitřního řízení, $\omega$ je dosud nezpracovaná část vstup\-ní\-ho řetězce a $\alpha = Z_{i_1} Z_{i_2} \dots Z_{i_k}$ je obsah zásobníku.
+Nechť $P = (Q, \Sigma, \Gamma, \delta, q_0, Z_0, F)$ je ZA. \emph{Konfigurací} nazveme trojici $(q, w, \alpha) \in Q \times \Sigma^* \times \Gamma^*$, kde $q$ je aktuální stav vnitřního řízení, $w$ je dosud nezpracovaná část vstup\-ní\-ho řetězce a $\alpha = Z_{i_1} Z_{i_2} \dots Z_{i_k}$ je obsah zásobníku.
 \end{definice}
 
 \subsection{Podsekce obsahující definici a větu}
 
 \begin{definice}
-    Řetězec $\omega$ nad abecedou $\Sigma$ je přijat ZA \emph{$A$ jest\-li\-že $(q_0, \omega, Z_0) \overset{\ast}{\underset{A}{\vdash}} (q_F, \epsilon, \gamma)$ pro nějaké $\gamma \in \Gamma^*$ a $q_F \in F$. Množina $L(A) = \{\omega \mid \omega$ je přijat ZA $A\} \subseteq \Sigma^*$ je} jazyk přijímaný ZA $A$.
+    Řetězec $w$ nad abecedou $\Sigma$ je přijat ZA \emph{$A$ jest\-li\-že $(q_0, w, Z_0) \overset{\ast}{\underset{A}{\vdash}} (q_F, \epsilon, \gamma)$ pro nějaké $\gamma \in \Gamma^*$ a $q_F \in F$. Množina $L(A) = \{w \mid w$ je přijat ZA $A\} \subseteq \Sigma^*$ je} jazyk přijímaný ZA $A$.
 \end{definice}
 
 \medskip
@@ -78,7 +78,7 @@ Nechť $P = (Q, \Sigma, \Gamma, \delta, q_0, Z_0, F)$ je ZA. \emph{Konfigurací}
 \end{veta}
 
 \section{Rovnice}
-Složitější matematické formulace sázíme mimo plynulý text pomocí prostředí \texttt{displaymath}. Lze umístit i ně\-ko\-lik výrazů na jeden řádek, ale pak je třeba tyto vhodně oddělit, například příkazem \texttt{\textbackslash quad}.
+Složitější matematické formulace sázíme mimo plynulý text pomocí prostředí \verb|displaymath|. Lze umístit i ně\-ko\-lik výrazů na jeden řádek, ale pak je třeba tyto vhodně oddělit, například příkazem \verb|\quad|.
 
 \begin{displaymath}
     1^{2^3} \neq \Delta^1_{\Delta^2_{\Delta^3}} \quad y^{11}_{22} - \sqrt[9]{x + \sqrt[7]{y}} \quad x > y_1 \leq y^2
@@ -89,26 +89,26 @@ Složitější matematické formulace sázíme mimo plynulý text pomocí prost�
 % MOC VELKA MEZERA
 
 \begin{eqnarray}
-    -\cos^2{\beta} & = & \frac{\frac{\frac{1}{x} + \frac{1}{3}} + {1000}}{\overset{8}{\underset{j = 2}{\prod}}q_j} \\
+    -\cos^2{\beta} & = & \frac{\frac{\frac{1}{x} + \frac{1}{3}}{y} + {1000}}{\overset{8}{\underset{j = 2}{\prod}}q_j} \\
     \label{rovnice2}
-    \bigg(\Big\{b \star [3 \div 4] \circ a\Big\}^{\frac{2}{3}}\bigg) & = & \log_{10}x \\
+    \bigg(\Big\{b\, \star\, \bigr[3 \div 4\bigr] \circ a\Big\}^{\frac{2}{3}}\bigg) & = & \log_{10}x \\
     \label{rovnice3}
-    \int^b_a f(x)dx & = & \int^d_c f(y)dy
+    \int^b_a f(x)\,dx & = & \int^d_c f(y)\,dy
 \end{eqnarray}
 
-\noindent V této větě vidíme, jak vypadá implicitní vysázení limity $\lim_{n \to \infty} f(m)$ v normálním odstavci textu. Podobně je to~i~s~dalšími symboly jako $\bigcup_{N \in \mathcal{M}}N$ či $\sum_{i=1}^m x_i^2$. S vy\-nu\-ce\-ním méně úsporné sazby příkazem \texttt{\textbackslash limits} budou vzorce vysázeny v podobě $\lim\limits_{m \to \infty}f(m)$ a $\sum\limits^m_{i=1}x^4_i$.
+\noindent V této větě vidíme, jak vypadá implicitní vysázení limity $\lim_{m \to \infty} f(m)$ v normálním odstavci textu. Podobně je to~i~s~dalšími symboly jako $\bigcup_{N \in \mathcal{M}}N$ či $\sum_{i=1}^m x_i^2$. S vy\-nu\-ce\-ním méně úsporné sazby příkazem \verb|\limits| budou vzorce vysázeny v podobě $\lim\limits_{m \to \infty}f(m)$ a $\sum\limits^m_{i=1}x^4_i$.
 
 \section{Matice}
-Pro sázení matic se velmi často používá prostředí \texttt{array} a závorky (\texttt{\textbackslash left}, \texttt{\textbackslash right}).
+Pro sázení matic se velmi často používá prostředí \verb|array| a závorky (\verb|\left|, \verb|\right|).
 
 % MOC VELKA MEZERA
 
 $$ \text{\textbf{B}} = \left|
 \begin{array}{cccc}
-b_{11} & b_{12} & \ldots & b_{1n} \\
-b_{21} & b_{22} & \ldots & b_{2n} \\
+b_{11} & b_{12} & \cdots & b_{1n} \\
+b_{21} & b_{22} & \cdots & b_{2n} \\
 \vdots & \vdots & \ddots & \vdots \\
-b_{m1} & b_{m2} & \ldots & b_{mn}
+b_{m1} & b_{m2} & \cdots & b_{mn}
 \end{array} \right|
 = \left|
 \begin{array}{cc}
@@ -125,7 +125,7 @@ $$ \mathbb{X} = \textbf{Y} \iff \bigg[
 \bigg] \neq 42
 $$
 
-Prostředí \texttt{array} lze úspěšně využít i jinde, například~na pravé straně následující rovnice. Kombinační číslo na levé straně vysázejte pomocí příkazu \texttt{\textbackslash binom}.
+Prostředí \verb|array| lze úspěšně využít i jinde, například~na pravé straně následující rovnice. Kombinační číslo na levé straně vysázejte pomocí příkazu \verb|\binom|.
 
 $$
 \binom{n}{k} = \left\{
