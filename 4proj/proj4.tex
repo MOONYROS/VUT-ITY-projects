@@ -1,0 +1,75 @@
+% autor: Ondrej Lukasek (xlukas15)
+
+
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[left=2cm,text={17cm, 24cm},top=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{times}
+\usepackage[hidelinks, unicode]{hyperref}
+\usepackage{breakurl}
+\def\UrlBreaks{\do\/\do-}
+
+\setlength{\parindent}{\baselineskip}
+\setlength{\parskip}{0em}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+    \Huge \textsc{Vysoké učení technické v~Brně}
+    
+    \huge \textsc{Fakulta informačních technologií}\\
+    \vspace{\stretch{0.382}}
+    {\LARGE Typografie a~publikování -- 4. projekt\\
+    \Huge Bibliografické citace}
+    \vspace{\stretch{0.618}}
+    \end{center}
+    {\Large \today \hfill Ondřej Lukášek}
+\end{titlepage}
+
+\section{Úvod}
+
+Písmo je snad nejstarším kulturním bohatstvím lidstva a vůbec první pokusy o písemné výrazy pocházejí z doby před více než 5000 lety. Od té dobý, přes vynález Gutenbergovy tiskárny ve Středověkém Německu až po dnešní moderní digitální publikování uběhla velmi dlouhá doba, která typografii tak jak ji známe, silně pozměnila a vylepšila.~\cite{Lennartz2011}
+
+U nás se počátky typografie datují kolem roku 1450 právě vynálezem tiskového lisu Johannesem Gutenbergem, který fungoval na základě pohyblivé litery. Tento způsob tisku se vylepšoval do 19. století, kdy přišel další velký přínos do typografie, kterým byly další způsoby tisku jako třeba litografie, barevný
+tisk, ofsetový tisk nebo rotačka. Ve dvacátém století začaly vznikat první kopírky nebo laserové tiskárny. Digitální editace tiskovin potom přišla až v 90. letech tohoto století.~\cite{Jirasek2015}
+
+\bigskip
+
+\noindent Typografie je obor, který se zabývá písmem a samotný název je složenina ze dvou latinských slov: \emph{typus}~(znak) a \emph{grafó}~(píši). Účelem typografie je umožnit jednodušší čtení a vnímání textu. Texty webových stránek (a dalších dokumentů) dodržující typografická pravidla, působí více profesionálně a zanechávají ve čtenáři příznivý dojem.~\cite{Gorecka2012}
+
+\bigskip
+
+Je určitě dobré se naučit dobré typografické zvyky, aby se předešlo případným kontroverzím, jako tomu bylo například u složení prezidentského slibu v roce 2023, kdy vzhled prezidentského slibu vyvolával smíšené reakce a podle ankety na \textit{IDNES.cz}~\cite{Pukovcova2023} se většině hlasujících nelíbil.
+
+Na dnešní moderní psaní v elektronické podobě lze používat mnoho různých nástrojů. Přestavíme tu tedy dva nejpoužívanější.
+
+\section{Nástroje}
+
+\subsection{Microsoft Word}
+Microsoft Word velice rozšířený textový procesor, který je standardně součástí balíčku Microsoft Office, obecně pro kancelářské a produktivní účely, nicméně může být zakoupen jako samostatný produkt.~\cite{Rouse2022}
+
+\subsection{\LaTeX}
+Jak se píše v knize \textit{LaTeX Beginner's Guide}~\cite{Kottwitz2011}, \LaTeX je pokročilý, open source (se zveřejněným zdrojovým kódem) nástroj k vysazování textu, který umožňuje vytvářet profesionální projekty, tiskoviny a PDF dokumenty, ať už prezentace, či třeba seminární nebo závěrečné práce.
+
+Jedna z výhod \LaTeX u spočívá v používání pro velké projekty a dokumenty, protože je potom jejich správa velmi uniformní. Při práci s \LaTeX em má člověk větší přehled o veškerých referenčních souborech a taky se v něm dají poměrně pohodlně dělat citace díky standardizovaným knihovnám.~\cite{Sokol2012}
+
+\section{Typografie v tisku}
+
+Je nutné podotknout, že typografie není nutně jenom téma, které se hodí pouze prakticky. Je to i populární zájmové téma, které se těší oblibě mnoha lidí a lze v něm probírat mnoho témat.
+
+Existuje mnoho typografických magazínů, ve kterých se můžete dočíst o významných typografech, jako například o Mathewu Carterovi, jeho životě a důležitých příspěvcích do typografie.~\cite{Blazek2005}
+
+Také však existují časopisy, které se zabývají přímo prací s \LaTeX em. Nejznámějším mezi takovými publikacemi je bezpochyby \textit{TUGboat}~\cite{TUGboat2022}\,--\,oficiální časopis TeX Users Group, jehož poslední vydání je z roku 2022.
+
+V některých časpisech jste se také mohli dozvědět, že na to, abyste se \LaTeX naučili nejpohodlněji, potřebujete nějakého přítele, který již tuto práci výborně ovládá. Případně také je možné se učit z koupené knihy nebo videonávodu.~\cite{Gratzer2008}
+
+\newpage
+
+\bibliographystyle{czechiso}
+\renewcommand{\refname}{Použitá Literatura}
+\bibliography{proj4}
+
+\end{document}
