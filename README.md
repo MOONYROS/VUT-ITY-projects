@@ -6,4 +6,4 @@
 - projekt 2: 13.5/15
 - projekt 3: 14/15
 - projekt 4: 12/15
-- projekt 5: TBD
+- projekt 5: 15/15
