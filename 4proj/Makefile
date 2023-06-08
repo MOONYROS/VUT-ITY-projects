@@ -1,4 +1,4 @@
-# autor: Ondrej Lukasek (xlukas15)
+#author: Ondrej Lukasek (xlukas15)
 
 ITY_PROJEKT=proj4
 INCLUDE=czechiso.bst

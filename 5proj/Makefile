@@ -1,3 +1,5 @@
+#author: Ondrej Lukasek (xlukas15)
+
 ITY_PROJEKT=proj5
 
 all:

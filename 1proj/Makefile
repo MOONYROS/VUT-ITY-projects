@@ -1,3 +1,5 @@
+#author: Ondrej Lukasek (xlukas15)
+
 ITY_PROJEKT=proj1
 
 $(ITY_PROJEKT).pdf: $(ITY_PROJEKT).ps
