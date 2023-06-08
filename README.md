@@ -4,7 +4,7 @@
 
 - **project 1: 8.5/10**  
 
-MISTAKES: Underfilled box, unused `\verb`, emphasis not done using `\emph`, wrong tilde (`~`) input (correctly `\textasciitilde`)
+MISTAKES: Underfilled box, unused `\verb`, emphasis not done using `\emph`, wrong tilde (`~`) input (correctly `\textasciitilde`).
 
 - **project 2: 13.5/15**
 
@@ -20,4 +20,4 @@ MISTAKES: Citations 2 and 3 have missing ISSN and citations are written behind f
 
 - **project 5: 15/15**
 
-MISTAKES: none
+MISTAKES: None.
