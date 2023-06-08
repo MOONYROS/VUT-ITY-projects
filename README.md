@@ -1,16 +1,16 @@
-# VUT FIT - Typografie a publikování (2022/2023)
+# VUT Typography and Publishing projects (2022/2023)
 
-## Hodnocení jednotlivých projektů
+## Project evaluations
 
-- **projekt 1: 8.5/10**  
+- **project 1: 8.5/10**  
 
 MISTAKES: Underfilled box, unused `\verb`, emphasis not done using `\emph`, wrong tilde (`~`) input (correctly `\textasciitilde`)
 
-- **projekt 2: 13.5/15**
+- **project 2: 13.5/15**
 
 MISTAKES: Missing non-breakable spaces, incorrect reference (correctly `\ref`), wrong titlepage spacing.
 
-- **projekt 3: 14/15**
+- **project 3: 14/15**
 
 MISTAKES: Highlighted URLs, small spaces near `verb`.
 
@@ -18,6 +18,6 @@ MISTAKES: Highlighted URLs, small spaces near `verb`.
 
 MISTAKES: Citations 2 and 3 have missing ISSN and citations are written behind full stops.
 
-- **projekt 5: 15/15**
+- **project 5: 15/15**
 
 MISTAKES: none
